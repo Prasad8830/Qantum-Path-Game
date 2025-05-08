@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quantum Path Game</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body { font-family: sans-serif; text-align: center; margin: 2rem; }
+    button { margin: 0.5rem; padding: 0.5rem 1rem; font-size: 1rem; border-radius: 4px;}
+    #grid { display: grid; grid-template-columns: repeat(4, 60px); gap: 5px; margin: 1rem auto; justify-content: center; }
+    .tile { width: 60px; height: 60px; line-height: 60px; border: 1px solid #ccc; font-weight: bold; }
+    .Path { background-color: lightgray; }
+    .Wall { background-color: darkgray; color: white; }
+    .Coin { background-color: gold; }
+  </style>
+</head>
+<body>
+  <h1>Quantum Path Game</h1>
+  <button onclick="startGame()">Start Game</button>
+  <div>
+    <button onclick="move('up')">⬆️ Up</button><br />
+    <div style="display: flex; justify-content: center; gap: 1.5rem;">
+      <button onclick="move('left')">⬅️ Left</button>
+      <button onclick="move('right')">➡️ Right</button>
+    </div>
+    <div style="text-align: center; margin-top: 0.5rem;">
+      <button onclick="move('down')">⬇️ Down</button>
+    </div>
+  </div>
+  <h3>Status: <span id="status">Not started</span></h3>
+  <div id="grid"></div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
